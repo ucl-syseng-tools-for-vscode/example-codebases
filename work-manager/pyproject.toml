@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "employee_manager"
+version = "0.1.0"
+description = "A CLI-based Employee Management System with payroll processing and reporting."
+authors = [{ name = "Swasti Jain", email = "your-email@example.com" }]
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "pytest",
+    "pytest-cov"
+]
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = "src"
+testpaths = ["tests"]
+addopts = "--cov=src --cov-report=term-missing"
